@@ -1,0 +1,36 @@
+.header-container{
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    height: auto;
+    overflow: auto;
+}
+
+span{
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+#header-left-content{
+    width: 40%;
+    padding: 0.8% 0% 0.8% 10%;
+}
+#header-left-content span:hover{
+    color: red
+}
+#header-right-content{
+    width: 60%;
+    padding: 0.8% 20% 0.8% 0%;
+}
+#header-right-content span{
+    padding: 0% 10% 0% 0%;
+    float: right;
+}
+#header-right-content span:hover{
+    color: yellow;
+}
