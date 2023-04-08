@@ -31,6 +31,6 @@ a{
     padding: 0% 10% 0% 0%;
     float: right;
 }
-#header-right-content span:hover{
+#header-right-content a:hover{
     color: yellow;
 }

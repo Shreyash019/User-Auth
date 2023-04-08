@@ -1,0 +1,60 @@
+.auth-container{
+    width: 70%;
+    height: auto;
+    overflow: auto;
+    margin: 5% 15%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.auth-left{
+    width: 60%;
+    height: 400px;
+    float: left;
+    background-color: antiquewhite;
+    background-image: url("../img/sbg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.auth-left h1{
+    text-align: center;
+    margin: 20% 0%;
+    color: white;
+}
+
+.auth-right{
+    width: 40%;
+    float: right;
+    margin: 0% 0%;
+    text-align: center;
+}
+.auth-right h2{
+    margin: 20% 0% 5%;
+    color:black;
+}
+.auth-right input{
+    width: 60%;
+    height: 25px;
+    margin: 2% 15%;
+    font-size: 0.8em;
+    border: none;
+    text-align: center;
+    background-color: rgb(253, 252, 240);
+    outline: none;
+}
+.auth-right input:hover{
+    background-color: rgb(240, 251, 253);
+}
+.auth-right button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding:1% 3%;
+    margin: 5% 0%;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.auth-right button:hover{
+    background-color: black;
+}

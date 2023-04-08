@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './auth.css';
 
 const SignUp = () => {
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <div>
-        <div>
-
+    <>
+      <div className='auth-container'>
+        <div className='auth-left'>
+          <h1>Welcome</h1>
         </div>
-        <div>
+        <div className='auth-right'>
+        <h2>Sign Up</h2>
           <form>
               <input type="text" name="name" placeholder='Name' required/>
               <input type="email" name="email" placeholder='Email' required/> 
@@ -18,7 +19,8 @@ const SignUp = () => {
           </form>
         </div>
       </div>
-    </div>
+    </>
+
   )
 }
 
