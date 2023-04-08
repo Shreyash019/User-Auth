@@ -1,7 +1,7 @@
 # User-Auth
 
 
-## API Endpoints Table
+### API Endpoints Table
 | API Route                 | EndPoints                                               |
 | ------------------------- | ------------------------------------------------------- |
 | User Sign Up              | http://localhost:5000/api/v1/user/signup                |
