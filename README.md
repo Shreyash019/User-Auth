@@ -1,6 +1,7 @@
 # User-Auth
 
-### Teck Stack Used: #### Node.js, React.js, JavaScript, Express, Mongoose, Redux, HTML & CSS.
+### Teck Stack Used: 
+#### Node.js, React.js, JavaScript, Express, Mongoose, Redux, HTML & CSS.
 
 
 ### API Endpoints Table
