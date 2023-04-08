@@ -1,0 +1,30 @@
+.home-top-container{
+    width: 100%;
+    height: auto;
+}
+.home-top-left{
+    width: 50%;
+    float: left;
+}
+.home-top-details{
+    width: 65%;
+    height: auto;
+    margin: 25% 5% 10% 30%;
+    text-align: right;
+}
+.home-top-details p{
+    color: rgb(12, 12, 80);
+    font-size: 1.5em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0% 0% 3%;
+}
+
+.home-top-right{
+    width: 50%;
+    float: left;
+}
+.home-top-right img{
+    width: 80%;
+    height: auto;
+    margin: -5% 0% 10%;
+}

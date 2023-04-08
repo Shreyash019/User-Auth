@@ -1,0 +1,26 @@
+.home-bottom-container{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.home-bottom-box{
+    width: 40%;
+    margin: 0% 30%;
+}
+.bottom-card{
+    width:35%;
+    height: 180px;
+    float: left;
+    margin: 10% 7.5% 20%;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.bottom-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.475) 0px 3px 8px;
+}
+.bottom-card h3{
+    margin: 5% 0% 10%;
+}
