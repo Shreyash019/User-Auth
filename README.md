@@ -1,4 +1,5 @@
 # User-Auth
+------------------------------------------------------------------------
 
 ### Teck Stack Used: 
 #### Node.js, React.js, JavaScript, Express, Mongoose, Redux, HTML & CSS.
@@ -16,3 +17,5 @@
 | User Password Change      | http://localhost:5000/api/v1/user/password/update       |
 | User Password Forgot      | http://localhost:5000/api/v1/user/password/forgot       |
 | User Password Reset Token | http://localhost:5000/api/v1/user/password/reset/:token |
+
+-----------------------------------------------------------------------

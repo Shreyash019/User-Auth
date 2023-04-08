@@ -1,4 +1,8 @@
 const server = require('./app');
+const mongoose = require('mongoose');
+const connectDatabase = require('./utils/databaseConnect');
+
+connectDatabase;
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, (err)=>{
