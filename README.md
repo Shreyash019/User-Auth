@@ -2,7 +2,7 @@
 
 ### Teck Stack Used: 
 #### Node.js, React.js, JavaScript, Express, Mongoose, Redux, HTML & CSS.
-
+------------------------------------------------------------------------
 
 ### API Endpoints Table
 | API Route                 | EndPoints                                               |
