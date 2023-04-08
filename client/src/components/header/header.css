@@ -1,4 +1,4 @@
-#header-container{
+.header-container{
     background-color: rgb(4, 8, 58);
     color: #ffffff;
     display: flex;
@@ -6,30 +6,30 @@
     overflow: auto;
 }
 
-#header-container span{
+.header-container span{
     font-family: sans-serif;
     font-size: 1.3em;
     font-weight: 600;
 }
-#header-container a{
+.header-container a{
     text-decoration: none;
     color: white;
 }
-#header-left-content{
+.header-left-content{
     width: 40%;
     padding: 1% 0% 1% 10%;
 }
-#header-left-content span:hover{
+.header-left-content span:hover{
     color: red
 }
-#header-right-content{
+.header-right-content{
     width: 60%;
     padding: 0.8% 20% 0.8% 0%;
 }
-#header-right-content span{
+.header-right-content span{
     padding: 0% 10% 0% 0%;
     float: right;
 }
-#header-right-content a:hover{
+.header-right-content a:hover{
     color: yellow;
 }

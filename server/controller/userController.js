@@ -6,7 +6,7 @@ const CatchAsync = require('../middleware/catchAsync');
 // 1) User Sign Up
 exports.user_auth_Sign_Up = CatchAsync(async (req, res) => {
     const {name, email, password} = req.body;
-
+    console.log(req.body)
     if(!name || !email || !password){
         return res.send('Please enter details.')
     }
@@ -32,6 +32,7 @@ exports.user_auth_Sign_Up = CatchAsync(async (req, res) => {
 // 2) User Sign In
 exports.user_auth_Sign_In = CatchAsync(async (req, res) => {
     const {email, password} = req.body;
+    console.log(req.body)
     if(!email || !password){
         return next(new ErrorHandler(`Please enter email and password`, 400));
     }
