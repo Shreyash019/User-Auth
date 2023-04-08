@@ -9,7 +9,7 @@ const HomeTop = () => {
       <div className='home-top-left'>
         <div className='home-top-details'>
           <p>Welcome to User-Auth...</p>
-          <p>Please register your self first</p>
+          <p>Please register yourself first</p>
           <p>If already registerd then</p>
           <p> Please login to use the website.</p>
           <h1 style={{fontSize: '5em', color: 'red'}}><GiRunningNinja/></h1>

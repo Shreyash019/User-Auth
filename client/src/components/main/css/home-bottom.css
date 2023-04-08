@@ -7,7 +7,17 @@
     width: 40%;
     margin: 0% 30%;
 }
+.home-bottom-box a{
+    color: blue;
+    font-size: 1.2em;
+}
+.home-bottom-box a:hover{
+    color: red;
+}
 .bottom-card{
+    background-color:aliceblue;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     width:35%;
     height: 180px;
     float: left;
@@ -22,5 +32,5 @@
     box-shadow: rgba(0, 0, 0, 0.475) 0px 3px 8px;
 }
 .bottom-card h3{
-    margin: 5% 0% 10%;
+    margin: 5% 0% 2%;
 }

@@ -15,7 +15,7 @@ const SignUp = () => {
               <input type="email" name="email" placeholder='Email' required/> 
               <input type="password" name="password" placeholder='Password' required/>      
               <input type="text" name="confirm_password" placeholder='Confirm Password' required/>  
-              <button type='submit'>Sign In</button>      
+              <button type='submit'>Sign Up</button>      
           </form>
         </div>
       </div>
