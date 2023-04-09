@@ -23,7 +23,6 @@ export const UserReducer = (state = {user: {}}, action)=>{
                 isAuthenticated: false
             }
         case LOGIN_SUCCESS:
-        case SIGNUP_SUCCESS:
         case LOAD_USER_SUCCESS:
             return {
                 ...state,
@@ -49,6 +48,7 @@ export const UserReducer = (state = {user: {}}, action)=>{
             };
 
         case LOGOUT_SUCCESS:
+        case SIGNUP_SUCCESS:
             return {
                 loading: false,
                 user: null,

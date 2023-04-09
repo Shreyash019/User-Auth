@@ -15,28 +15,33 @@
     width: 40%;
     height:3px;
     background-color: red;
-    margin: 0% 30%;
+    margin: 2% 30% 0%;
     border: none;
     border-radius: 2px;
 }
 .user-left-top{
     width:100%;
     height:50%;
+    text-align: center;
 }
 .user-left-top img{
-    width: 220px;
-    height:250px;
-    margin: 10% 25%;
+    width: 200px;
+    height:220px;
+    margin: 10% 27% 2%;
     border-radius: 20%;
+}
+.user-left-top span{
+    padding: 0% 4%;
+    font-size: 1.2em;
 }
 .user-left-bottom{
     width:100%;
     height:50%;
-    margin: 5% 0% 15% 0%;
+    margin: 2% 0% 15% 0%;
     text-align: center;
 }
 .user-left-bottom span{
-    padding: 2% 4%;
+    padding: 0% 4%;
     font-size: 2em;
 }
 
@@ -74,5 +79,5 @@
 }
 .user-details b{
     color: rgb(16, 6, 124);
-    font-size: 1.2em;
+    font-size: 1em;
 }

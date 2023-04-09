@@ -9,8 +9,9 @@ import {clearErrors} from '../../utils/actions/UserActions';
 import {BsFacebook} from 'react-icons/bs';
 import {SiSnapchat} from 'react-icons/si';
 import {FaBirthdayCake, FaLink} from 'react-icons/fa';
-import {MdEmail, MdLocationOn} from 'react-icons/md';
+import {MdEmail, MdLocationOn, MdContactPage, MdEditSquare, MdDelete} from 'react-icons/md';
 import {AiFillInstagram} from 'react-icons/ai';
+import {RiImageEditFill} from 'react-icons/ri'
 
 const UserProfile = () => {
       // const [user, setUser] = useState();
@@ -42,6 +43,9 @@ const UserProfile = () => {
       <div className='user-left'>
         <div className='user-left-top'>
           <img src={userpro} alt="User_Profile" />
+          <span><RiImageEditFill/></span>
+          <span><MdEditSquare/></span>
+          <span style={{color: "rgb(255, 2, 95)"}}><MdDelete/></span>
           <hr/>
         </div>
         <div className='user-left-bottom'>
@@ -55,8 +59,9 @@ const UserProfile = () => {
           <h1>{user.name}</h1>
           <hr/><br/>
           <p><b><MdEmail/></b>&ensp;&ensp;{user.email}</p>
-          <p><b><MdLocationOn/></b>&ensp;&ensp;India</p>
+          <p><b><MdContactPage/></b>&ensp;&ensp;Contact</p>
           <p><b><FaBirthdayCake/></b>&ensp;&ensp;1 Jan 2000</p>
+          <p><b><MdLocationOn/></b>&ensp;&ensp;India</p>
           <p><b><FaLink/></b>&ensp;&ensp;15 Dec 2020</p>
         </div>
       </div>

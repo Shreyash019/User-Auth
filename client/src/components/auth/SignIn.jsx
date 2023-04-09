@@ -40,7 +40,7 @@ const SignIn = () => {
               <button type='submit'>Sign In</button>      
             </form>
             <p> <Link to='/password/forgot'>Forgot Password</Link></p>
-            <p>Don't have a account! <Link to='/signup'>SignUp</Link></p>
+            <p>Don't have a account! <Link to='/signup'>Signup</Link></p>
           </div>
         </div>
       </>

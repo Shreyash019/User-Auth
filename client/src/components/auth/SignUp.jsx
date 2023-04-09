@@ -46,7 +46,7 @@ const SignUp = () => {
                 <input type="text" name="confirm_password" placeholder='Confirm Password' required/>  
                 <button type='submit'>Sign Up</button>      
             </form>
-            <p>Already have a account! <Link to='/signin'>SignIn</Link></p>
+            <p>Already have a account! <Link to='/signin'>Signin</Link></p>
           </div>
         </div>
       </>

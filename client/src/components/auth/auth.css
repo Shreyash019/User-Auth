@@ -57,3 +57,15 @@
 .auth-right button:hover{
     background-color: black;
 }
+
+.auth-right p{
+    font-size: 0.7em;
+    margin: 3% 0%;
+}
+.auth-right a{
+    color: blue;
+    text-decoration: none;
+}
+.auth-right a:hover{
+    color: red;
+}
