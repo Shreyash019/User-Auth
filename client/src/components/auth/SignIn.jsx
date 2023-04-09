@@ -16,10 +16,16 @@ const SignIn = () => {
   const handleOnSubmit = (e) =>{
     e.preventDefault();
     dispatch(login(loginEmail, loginPassword))
+      .then((isAuthenticated) => {
+      if(isAuthenticated==false){
+        history('/signin')
+      }
+    })
   }
   useEffect(()=>{
     dispatch(clearErrors);
     if(isAuthenticated){
+      alert('Logged IN')
       history('/user/profile')
     }
   },[dispatch, error, isAuthenticated])
@@ -39,7 +45,7 @@ const SignIn = () => {
               <input type="password" name='password' value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder='Password' autoComplete="off"/><br/>      
               <button type='submit'>Sign In</button>      
             </form>
-            <p> <Link to='/password/forgot'>Forgot Password</Link></p>
+            <p><Link to='/user/password/forgot'>Forgot Password</Link></p>
             <p>Don't have a account! <Link to='/signup'>Signup</Link></p>
           </div>
         </div>

@@ -2,14 +2,14 @@ import React, {useState, useEffect} from 'react';
 import './css/user.css';
 import userpro from '../img/user1.png';
 
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {clearErrors} from '../../utils/actions/UserActions';
 
 import {BsFacebook} from 'react-icons/bs';
 import {SiSnapchat} from 'react-icons/si';
 import {FaBirthdayCake, FaLink} from 'react-icons/fa';
-import {MdEmail, MdLocationOn, MdContactPage, MdEditSquare, MdDelete} from 'react-icons/md';
+import {MdEmail, MdLocationOn, MdContactPage, MdEditSquare, MdDelete, MdPassword} from 'react-icons/md';
 import {AiFillInstagram} from 'react-icons/ai';
 import {RiImageEditFill} from 'react-icons/ri'
 
@@ -45,7 +45,8 @@ const UserProfile = () => {
           <img src={userpro} alt="User_Profile" />
           <span><RiImageEditFill/></span>
           <span><MdEditSquare/></span>
-          <span style={{color: "rgb(255, 2, 95)"}}><MdDelete/></span>
+          <span style={{color: "rgb(255, 2, 95)"}}><MdDelete/></span><br/>
+          <p><br/><Link to='/user/password/update'>Update Password</Link></p>
           <hr/>
         </div>
         <div className='user-left-bottom'>

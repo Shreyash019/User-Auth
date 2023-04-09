@@ -30,7 +30,7 @@ exports.user_auth_Sign_Up = CatchAsync(async (req, res) => {
 })
 
 // 2) User Sign In
-exports.user_auth_Sign_In = CatchAsync(async (req, res) => {
+exports.user_auth_Sign_In = CatchAsync(async (req, res, next) => {
     const {email, password} = req.body;
     console.log(req.body)
     if(!email || !password){
@@ -80,7 +80,7 @@ exports.user_auth_User_Profile_Update = CatchAsync(async(req, res, next)=>{
 })
 
 // 6) User Password Update
-exports.user_auth_User_Password_Update = CatchAsync(async(req, res) => {
+exports.user_auth_User_Password_Update = CatchAsync(async(req, res, next) => {
     const user = await UserModel.findById(req.user.id).select('+password');
 
     const passwordMatch = await user.correctPassword(req.body.old_Password, user.password);

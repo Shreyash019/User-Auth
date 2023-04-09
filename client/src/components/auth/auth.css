@@ -9,7 +9,7 @@
 
 .auth-left{
     width: 60%;
-    height: 400px;
+    height: 30vw;
     float: left;
     background-image: url("../img/sbg.jpg");
     background-size: 100% 100%;
@@ -18,54 +18,86 @@
 
 .auth-left h1{
     text-align: center;
-    margin: 20% 0%;
+
     color: white;
 }
 
 .auth-right{
     width: 40%;
     float: right;
-    margin: 0% 0%;
+    margin: 0% 0% 2%;
     text-align: center;
 }
 .auth-right h2{
-    margin: 20% 0% 5%;
-    color:black;
-}
-.auth-right input{
-    width: 60%;
-    height: 25px;
-    margin: 2% 15%;
-    font-size: 0.8em;
-    border: none;
-    text-align: center;
-    background-color: rgb(253, 252, 240);
-    outline: none;
-}
-.auth-right input:hover{
-    background-color: rgb(240, 251, 253);
-}
-.auth-right button{
-    background-color: red;
-    color: white;
-    border: none;
-    padding:1% 3%;
-    margin: 5% 0%;
-    font-weight: 600;
-    border-radius: 5px;
-}
-.auth-right button:hover{
-    background-color: black;
+    margin: 5% 0% 5%;
 }
 
 .auth-right p{
     font-size: 0.7em;
     margin: 3% 0%;
 }
-.auth-right a{
-    color: blue;
-    text-decoration: none;
+
+
+@media screen and (max-width: 600px)  {
+    .auth-left{
+        width: 100%;
+        height: 200px;
+    }
+    .auth-right{
+        width: 100%;
+    }
+    .auth-left h1{
+        margin: 50px 0%;
+        font-size: 4vw;
+    }
 }
-.auth-right a:hover{
-    color: red;
+
+@media screen and (min-width: 601px)  {
+    .auth-left{
+        width: 100%;
+        height: 300px;
+    }
+    .auth-right{
+        width: 100%;
+    }
+    .auth-left h1{
+        margin: 80px 0%;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 750px)  {
+    .auth-left{
+        width: 50%;
+    }
+    .auth-right{
+        width: 50%;
+    }
+    .auth-left h1{
+        margin: 90px 0%;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 900px)  {
+    .auth-left{
+        width: 50%;
+        height: 32vw;
+    }
+    .auth-right{
+        width: 50%;
+    }
+    .auth-left h1{
+        margin: 25% 0%;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1200px)  {
+    .auth-left{
+        width: 50%;
+    }
+    .auth-right{
+        width: 50%;
+    }
 }

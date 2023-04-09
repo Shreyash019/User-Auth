@@ -16,7 +16,6 @@ import {
 export const login = (email, password)=> async(dispatch)=>{
     try{
         dispatch({ type: LOGIN_REQUEST })
-
         const config = { headers: { "Content-Type": "application/json" } };
         const {data} = await axios.post(`http://localhost:5000/api/v1/user/signin`, {
             email, password},
