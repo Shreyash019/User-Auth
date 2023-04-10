@@ -15,7 +15,7 @@
     color: red;
 }
 .bottom-card{
-    background-size: 100% 100%;
+    background-size: 100% 90%;
     background-repeat: no-repeat;
     width:35%;
     height: 180px;
@@ -31,5 +31,20 @@
     box-shadow: rgba(0, 0, 0, 0.475) 0px 3px 8px;
 }
 .bottom-card h3{
-    margin: 5% 0% 2%;
+    margin: 5% 0% 4%;
+}
+
+
+@media screen and (max-width:750px) {
+    .home-bottom-box{
+        width: 80%;
+        margin: 0% 10%;
+    }
+    .bottom-card{
+        height: 120px;
+    }
+    .home-bottom-box a{
+        color: blue;
+        font-size: 1em;
+    }
 }

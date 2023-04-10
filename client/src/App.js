@@ -20,6 +20,7 @@ import UserProfile from './components/user/UserProfile';
 import UserProfileUpdate from './components/user/UserProfileUpdate';
 import PasswordUpdate from './components/user/PasswordUpdate';
 import ForgotPassword from './components/user/ForgotPassword';
+import ResetPassword from './components/user/ResetPassword';
 
 //
 import store from './store/Store';
@@ -28,13 +29,13 @@ import { loadUser } from './utils/actions/UserActions';
 
 
 function App() {
-  const { error, loading, isAuthenticated } = useSelector(state=> state.user);
+  const { error, isAuthenticated } = useSelector(state=> state.user);
   useEffect(()=>{
     if(isAuthenticated){
       store.dispatch(loadUser())
     } else{
     }
-  }, [])
+  }, [error]) // Change
   return (
     <>
       <Header/>
@@ -51,6 +52,7 @@ function App() {
             <Route exact path='/signup' element={<SignUp/>} />
             <Route exact path='/signin' element={<SignIn/>} />
             <Route exact path='/user/password/forgot' element={<ForgotPassword/>} />
+            <Route exact path='/user/password/reset' element={<ResetPassword/>} />
           </>
         }
       </Routes>

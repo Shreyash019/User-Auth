@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import './css/user.css';
 import userpro from '../img/user1.png';
 
@@ -9,33 +9,22 @@ import {clearErrors} from '../../utils/actions/UserActions';
 import {BsFacebook} from 'react-icons/bs';
 import {SiSnapchat} from 'react-icons/si';
 import {FaBirthdayCake, FaLink} from 'react-icons/fa';
-import {MdEmail, MdLocationOn, MdContactPage, MdEditSquare, MdDelete, MdPassword} from 'react-icons/md';
+import {MdEmail, MdLocationOn, MdContactPage, MdEditSquare, MdDelete} from 'react-icons/md';
 import {AiFillInstagram} from 'react-icons/ai';
 import {RiImageEditFill} from 'react-icons/ri'
 
 const UserProfile = () => {
-      // const [user, setUser] = useState();
-    // const [isLoading, setLoading] = useState(true)
     const history = useNavigate();
     const dispatch = useDispatch();
     const { error, user, isAuthenticated } = useSelector(state=> state.user);
   
-    useEffect(()=>{
-    }, [])
-  
-    const handleOnClickProfile = ()=>{
-      alert(user._id)
-      history(`/profile/update/${user._id}`)
+    if(!isAuthenticated){
+      history('/')
     }
-
-    const handleOnClickPassword = ()=>{
-      history(`/password/update/${user._id}`)
-    }
-
+    console.log(user, isAuthenticated)
     useEffect(()=>{
-      dispatch(clearErrors);
-      if(!isAuthenticated){
-        history('/')
+      if(error){
+        dispatch(clearErrors);
       }
     },[dispatch, error, isAuthenticated])
   return (
@@ -44,7 +33,7 @@ const UserProfile = () => {
         <div className='user-left-top'>
           <img src={userpro} alt="User_Profile" />
           <span><RiImageEditFill/></span>
-          <span><MdEditSquare/></span>
+          <span><Link to='/user/profile/update'><MdEditSquare/></Link></span>
           <span style={{color: "rgb(255, 2, 95)"}}><MdDelete/></span><br/>
           <p><br/><Link to='/user/password/update'>Update Password</Link></p>
           <hr/>

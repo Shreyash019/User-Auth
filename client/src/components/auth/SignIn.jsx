@@ -2,33 +2,35 @@ import React, {useEffect, useState}  from 'react'
 import {Link, useNavigate} from 'react-router-dom';
 import { useDispatch, useSelector} from 'react-redux';
 import {login, clearErrors} from '../../utils/actions/UserActions';
+import { useSnackbar } from 'notistack';
 import './auth.css';
 
 
 const SignIn = () => {
-  const history = useNavigate();
+
   const dispatch = useDispatch();
-  const { error, loading, isAuthenticated } =  useSelector((state)=> state.user)
+  const history = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
+  const {user, error, loading, isAuthenticated } =  useSelector((state)=> state.user)
   
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-  const handleOnSubmit = (e) =>{
+  const handleOnSubmit = async (e) =>{
     e.preventDefault();
     dispatch(login(loginEmail, loginPassword))
-      .then((isAuthenticated) => {
-      if(isAuthenticated==false){
-        history('/signin')
-      }
-    })
   }
+  
   useEffect(()=>{
-    dispatch(clearErrors);
-    if(isAuthenticated){
-      alert('Logged IN')
+    if(error){
+      dispatch(clearErrors)
+    }
+    if(isAuthenticated===true){
       history('/user/profile')
     }
+
   },[dispatch, error, isAuthenticated])
+
   return (
     <>
     { loading ? 

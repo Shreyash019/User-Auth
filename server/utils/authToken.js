@@ -22,7 +22,7 @@ exports.sendToken = (user, statusCode, res) => {
     res.cookie('token', token, options);
 
     // 4) Sending response
-    res.status(statusCode).json({
+    return res.status(statusCode).json({
         success: true,
         user,
         token

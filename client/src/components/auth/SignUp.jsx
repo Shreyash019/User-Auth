@@ -26,7 +26,9 @@ const SignUp = () => {
   }
 
   useEffect(()=>{
-    dispatch(clearErrors);
+    if(error){
+      dispatch(clearErrors);
+    }
   },[dispatch, error, isAuthenticated])
   return (
     <>

@@ -17,7 +17,9 @@ const Header = () => {
   }
 
   useEffect(()=>{
-    dispatch(clearErrors);
+    if(error){
+      dispatch(clearErrors);
+    }
     if(isAuthenticated===false){
       history('/')
     }

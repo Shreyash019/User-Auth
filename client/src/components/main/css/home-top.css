@@ -28,3 +28,27 @@
     height: auto;
     margin: -5% 0% 10%;
 }
+
+
+@media screen and (max-width:750px) {
+    .home-top-left{
+        width: 100%;
+    }
+
+    .home-top-details{
+        width: 60%;
+        margin: 25% 20% 5%;
+        text-align: left;
+    }
+    .home-top-right{
+        width: 100%;
+    }
+    .home-top-right img{
+        width: 80%;
+        height: auto;
+        margin: -5% 10% 10%;
+    }
+    .home-top-details p{
+        font-size: 1em;
+    }
+}

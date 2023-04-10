@@ -1,6 +1,7 @@
 const UserModel = require('../model/userModel');
 const authToken = require('../utils/authToken');
 const CatchAsync = require('../middleware/catchAsync');
+const ErrorHandler = require ('../utils/errorHandler');
 
 
 // 1) User Sign Up
@@ -38,9 +39,19 @@ exports.user_auth_Sign_In = CatchAsync(async (req, res, next) => {
     }
     const user = await UserModel.findOne({email}).select("+password");
     console.log(user)
-    if(!user || !await user.correctPassword(password, user.password)){
-        return next(new ErrorHandler(`Invalid email and password`, 401))
+
+    if(!user) {
+        // return res.send('Invalid details')
+        return next(new ErrorHandler("Invalid Email or Password.", 401));
     }
+    const isPasswordMatched = await user.correctPassword(password, user.password)
+
+    if(!isPasswordMatched) {
+        return next(new ErrorHandler("Invalid Email or Password 55", 401));
+    }
+    // if(!user || !await user.correctPassword(password, user.password)){
+    //     return next(new ErrorHandler(`Invalid email and password`, 401))
+    // }
     authToken.sendToken(user, 200, res);
 })
 
@@ -83,17 +94,17 @@ exports.user_auth_User_Profile_Update = CatchAsync(async(req, res, next)=>{
 exports.user_auth_User_Password_Update = CatchAsync(async(req, res, next) => {
     const user = await UserModel.findById(req.user.id).select('+password');
 
-    const passwordMatch = await user.correctPassword(req.body.old_Password, user.password);
+    const passwordMatch = await user.correctPassword(req.body.oldPassword, user.password);
 
     if(!passwordMatch){
         return next(new ErrorHandler('Old password is incorrect', 400))
     }
 
-    if(req.body.new_Password !== req.body.confirm_password){
+    if(req.body.newPassword !== req.body.confirmPassword){
         return next(new ErrorHandler('Password not matched.', 400))
     }
 
-    user.password = req.body.new_Password;
+    user.password = req.body.newPassword;
     await user.save();
 
     authToken.sendToken(user, 200, res)

@@ -10,7 +10,7 @@ router.route('/logout').get(user_auth.user_auth_Sign_Out)
 
 // User Profile Routes
 router.route('/profile').get(authToken.isUserAuthenticated, user_auth.user_auth_User_Profile)
-router.route('/profile/update').put(authToken.isUserAuthenticated, user_auth.user_auth_User_Profile_Update)
+router.route('/profile/update/:id').put(authToken.isUserAuthenticated, user_auth.user_auth_User_Profile_Update)
 router.route('/account/delete').delete(authToken.isUserAuthenticated, user_auth.user_auth_User_Profile_Update)
 
 // User Password Routes
