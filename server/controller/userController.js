@@ -1,8 +1,8 @@
 const UserModel = require('../model/userModel');
-const authToken = require('../utils/authToken');
+const ErrorHandler = require('../utils/errorHandler');
 const CatchAsync = require('../middleware/catchAsync');
-const ErrorHandler = require ('../utils/errorHandler');
-
+const authToken = require('../utils/authToken');
+const crypto = require('crypto');
 
 // 1) User Sign Up
 exports.user_auth_Sign_Up = CatchAsync(async (req, res) => {
@@ -34,25 +34,20 @@ exports.user_auth_Sign_Up = CatchAsync(async (req, res) => {
 exports.user_auth_Sign_In = CatchAsync(async (req, res, next) => {
     const {email, password} = req.body;
     console.log(req.body)
+    let userCheck;
+    // Checking if email and password
     if(!email || !password){
-        return next(new ErrorHandler(`Please enter email and password`, 400));
+        return next(new ErrorHandler(`Please enter email and password`, 400))
     }
-    const user = await UserModel.findOne({email}).select("+password");
-    console.log(user)
 
-    if(!user) {
-        // return res.send('Invalid details')
-        return next(new ErrorHandler("Invalid Email or Password.", 401));
-    }
-    const isPasswordMatched = await user.correctPassword(password, user.password)
+    // Checking if user exist
+    userCheck  = await UserModel.findOne({email}).select("+password");
+    console.log(userCheck.email)
 
-    if(!isPasswordMatched) {
-        return next(new ErrorHandler("Invalid Email or Password 55", 401));
+    if(!userCheck || !await userCheck.correctPassword(password, userCheck.password)){
+        return next(new ErrorHandler('Invalid email and password', 401))
     }
-    // if(!user || !await user.correctPassword(password, user.password)){
-    //     return next(new ErrorHandler(`Invalid email and password`, 401))
-    // }
-    authToken.sendToken(user, 200, res);
+    authToken.sendToken(userCheck, 200, res)
 })
 
 // 3) User Sign Out

@@ -23,9 +23,11 @@ const SignIn = () => {
   
   useEffect(()=>{
     if(error){
+      
+      console.log(error)
       dispatch(clearErrors)
     }
-    if(isAuthenticated===true){
+    if(isAuthenticated){
       history('/user/profile')
     }
 
